@@ -1,6 +1,6 @@
 # URL Shortener for Cloudflare Workers
 
-A simple URL shortener running on Cloudflare Workers with IP-based access control and persistent storage.
+A simple URL shortener running on Cloudflare Workers with IP-based access control and persistent storage that is fully deployable on Cloudflare's free tier.
 
 > **New to Cloudflare Workers?** Check out the [Getting Started Guide](https://developers.cloudflare.com/workers/get-started/guide/) to learn the basics.
 
@@ -10,6 +10,12 @@ A simple URL shortener running on Cloudflare Workers with IP-based access contro
 - List endpoint to view all URLs
 - IP-based allow-list for security
 - Persistent storage using SQLite-based Durable Objects (no external database required)
+
+## Stack
+
+- Cloudflare Worker (100,000 requests/day on free tier)
+- URL Store as a SQLite-based Durable Object (available on free tier for persistent storage)
+- Deploy to `*.workers.dev` subdomain or use your own custom domain with automatic HTTPS (both included in free tier)
 
 ## Setup
 
