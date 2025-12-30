@@ -112,8 +112,8 @@ curl -X POST https://yourdomain.com/flush
 
 ## Security
 
-- POST `/new`, GET `/list`, and POST `/flush` use `ADMIN_ALLOWED_IPS` for IP filtering
-- GET `/{code}` uses `PUBLIC_ALLOWED_IPS` for IP filtering
+- Routes `/new`, `/list`, and `/flush` use `ADMIN_ALLOWED_IPS` for IP filtering
+- Routes `/{code}` use `PUBLIC_ALLOWED_IPS` for IP filtering
 - If an environment variable is not set or empty, no IPs are allowed for that route type
 - Configure environment variables with comma-separated IP addresses
 - Supports IPv4, IPv6, and CIDR notation (e.g., `192.168.1.0/24`, `2001:db8::/32`)

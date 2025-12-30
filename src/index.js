@@ -14,9 +14,11 @@ export default {
     const method = request.method;
     
     // Determine if this is an admin route
-    const isAdminRoute = (method === 'POST' && path === ROUTES.CREATE) ||
-                        (method === 'GET' && path === ROUTES.LIST) ||
-                        (method === 'POST' && path === ROUTES.FLUSH);
+    const isAdminRoute = (path === ROUTES.CREATE) || (path === ROUTES.LIST) || (path === ROUTES.FLUSH);
+
+    if (!isAdminRoute && method === 'POST') {
+      return new Response('Forbidden', { status: 403 });
+    }
     
     // Initialize IP matchers if needed
     if (!env._adminIPMatcher) {
