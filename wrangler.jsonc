@@ -1,0 +1,24 @@
+{
+  "name": "urlsh",
+  "main": "src/index.js",
+  "compatibility_date": "2025-12-21",
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["UrlStore"]
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "URL_STORE",
+        "class_name": "UrlStore"
+      }
+    ]
+  },
+  "vars": {
+    "ADMIN_ALLOWED_IPS": "0.0.0.0/0,::/0",
+    "PUBLIC_ALLOWED_IPS": "0.0.0.0/0,::/0",
+    "SHORT_CODE_LENGTH": "4"
+  }
+}

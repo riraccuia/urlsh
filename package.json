@@ -1,0 +1,13 @@
+{
+  "name": "urlsh",
+  "version": "1.0.0",
+  "description": "URL shortener for Cloudflare Workers",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.56.0"
+  }
+}
